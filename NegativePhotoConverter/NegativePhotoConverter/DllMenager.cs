@@ -8,5 +8,9 @@ namespace NegativePhotoConverter
 {
     internal class DllMenager
     {
+        public DllMenager() 
+        {
+
+        }
     }
 }
