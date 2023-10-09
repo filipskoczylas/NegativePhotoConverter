@@ -7,7 +7,7 @@ namespace NegativePhotoConverter
     {
         Stopwatch stopwatch;
         DllMenager dllMenager;
-        string[] filesToConvert;
+        string fileToConvert;
         public Form1()
         {
             InitializeComponent();
@@ -20,31 +20,24 @@ namespace NegativePhotoConverter
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckFileExists = true;
             openFileDialog.CheckPathExists = true;
-            openFileDialog.Multiselect= true;
             openFileDialog.InitialDirectory = "c:\\";
             openFileDialog.Title = "Select images to convert";
             openFileDialog.RestoreDirectory = true;
-            openFileDialog.Filter = "Images (*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)|All files (*.*)";
+            //openFileDialog.Filter = "Images (*.jpg;*.png,*.jpeg)|All files (*.*)";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                filesToConvert = openFileDialog.FileNames;
-            }
-            else
-            {
-                MessageBox.Show("Failed to open files");
+                fileToConvert = openFileDialog.FileName;
             }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
             int a = 0;
+            Bitmap bitmap = new Bitmap(fileToConvert);
             StartTimer();
-            //dllMenager.Run(rbAssembly.Checked);//Todo
-            for(int i = 0; i < 100000; i++)
-            {
-                a++;
-            }
+            object result = dllMenager.Run(bitmap, (int)nupThreads.Value);
             StopTimer();
+            pbNegative.Image = (Bitmap)result;
         }
 
         #region Timer

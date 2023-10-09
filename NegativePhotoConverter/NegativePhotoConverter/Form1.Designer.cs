@@ -35,7 +35,9 @@
             this.lbTime = new System.Windows.Forms.Label();
             this.lbThreads = new System.Windows.Forms.Label();
             this.nupThreads = new System.Windows.Forms.NumericUpDown();
+            this.pbNegative = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupThreads)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNegative)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoadImages
@@ -130,11 +132,20 @@
             0,
             0});
             // 
+            // pbNegative
+            // 
+            this.pbNegative.Location = new System.Drawing.Point(423, 131);
+            this.pbNegative.Name = "pbNegative";
+            this.pbNegative.Size = new System.Drawing.Size(365, 307);
+            this.pbNegative.TabIndex = 10;
+            this.pbNegative.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbNegative);
             this.Controls.Add(this.nupThreads);
             this.Controls.Add(this.lbThreads);
             this.Controls.Add(this.lbTime);
@@ -146,6 +157,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.nupThreads)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNegative)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +174,6 @@
         private Label lbTime;
         private Label lbThreads;
         private NumericUpDown nupThreads;
+        private PictureBox pbNegative;
     }
 }

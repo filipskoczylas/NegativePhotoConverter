@@ -5,8 +5,8 @@ namespace NegativeConverter
 {
     public class NegativeConverter
     {
-        private readonly static object Lock = new object();
-        public static Bitmap ConvertToNegative(Bitmap bitmap, int threads)
+        private readonly object Lock = new object();
+        public Bitmap ConvertToNegative(Bitmap bitmap, int threads)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace NegativeConverter
             catch { }
             return bitmap;
         }
-        private static void ConvertAsync(ref Bitmap bitmap, int width, int startHeight, int endHeight)
+        private void ConvertAsync(ref Bitmap bitmap, int width, int startHeight, int endHeight)
         {
             for(int x= 0; x<width; x++)
             {
@@ -38,7 +38,7 @@ namespace NegativeConverter
                 }
             }
         }
-        private static void SetPixelAsync(ref Bitmap bitmap, int x, int y)
+        private void SetPixelAsync(ref Bitmap bitmap, int x, int y)
         {
             Color pixel = Color.Black;
             lock (Lock)

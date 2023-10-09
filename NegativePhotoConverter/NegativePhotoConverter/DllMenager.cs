@@ -9,21 +9,16 @@ namespace NegativePhotoConverter
 {
     internal class DllMenager
     {
-        MethodInfo method;
-        object activatior;
-        public DllMenager() 
+        public DllMenager() { }
+        public object Run(Bitmap bitmap, int threads)
         {
-            try
-            {
-                Assembly assembly = Assembly.LoadFile("TODO");
-                Type type = assembly.GetType("TODO");
-                activatior = Activator.CreateInstance(type, 1);
-                method = type.GetMethod("TODO NAME");
-            }
-            catch
-            {
-                
-            }
+            string path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
+            var assembly = Assembly.LoadFile(path);
+            var type = assembly.GetType("NegativeConverter.NegativeConverter");
+            var activator = Activator.CreateInstance(type);
+            var method = type.GetMethod("ConvertToNegative");
+            var result = method.Invoke(activator, new object[] { bitmap, threads });
+            return result;
         }
     }
 }
