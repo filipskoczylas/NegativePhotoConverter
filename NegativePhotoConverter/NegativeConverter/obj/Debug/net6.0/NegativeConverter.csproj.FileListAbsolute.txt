@@ -1,0 +1,12 @@
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.deps.json
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.pdb
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.csproj.AssemblyReference.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.AssemblyInfoInputs.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.AssemblyInfo.cs
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.csproj.CoreCompileInputs.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\refint\NegativeConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.pdb
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\ref\NegativeConverter.dll
