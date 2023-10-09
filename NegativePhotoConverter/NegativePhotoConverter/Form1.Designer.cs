@@ -31,6 +31,10 @@
             this.rbAssembly = new System.Windows.Forms.RadioButton();
             this.rbCsharp = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
+            this.lbTimeElapsedConst = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.cmbThreads = new System.Windows.Forms.ComboBox();
+            this.lbThreads = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLoadImages
@@ -41,6 +45,7 @@
             this.btnLoadImages.TabIndex = 0;
             this.btnLoadImages.Text = "Select images";
             this.btnLoadImages.UseVisualStyleBackColor = true;
+            this.btnLoadImages.Click += new System.EventHandler(this.btnLoadImages_Click);
             // 
             // rbAssembly
             // 
@@ -72,12 +77,53 @@
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // lbTimeElapsedConst
+            // 
+            this.lbTimeElapsedConst.AutoSize = true;
+            this.lbTimeElapsedConst.Location = new System.Drawing.Point(12, 140);
+            this.lbTimeElapsedConst.Name = "lbTimeElapsedConst";
+            this.lbTimeElapsedConst.Size = new System.Drawing.Size(170, 20);
+            this.lbTimeElapsedConst.TabIndex = 4;
+            this.lbTimeElapsedConst.Text = "Function execution time:";
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.Location = new System.Drawing.Point(12, 160);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(17, 20);
+            this.lbTime.TabIndex = 5;
+            this.lbTime.Text = "0";
+            this.lbTime.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cmbThreads
+            // 
+            this.cmbThreads.FormattingEnabled = true;
+            this.cmbThreads.Location = new System.Drawing.Point(217, 32);
+            this.cmbThreads.Name = "cmbThreads";
+            this.cmbThreads.Size = new System.Drawing.Size(48, 28);
+            this.cmbThreads.TabIndex = 6;
+            // 
+            // lbThreads
+            // 
+            this.lbThreads.AutoSize = true;
+            this.lbThreads.Location = new System.Drawing.Point(217, 9);
+            this.lbThreads.Name = "lbThreads";
+            this.lbThreads.Size = new System.Drawing.Size(102, 20);
+            this.lbThreads.TabIndex = 7;
+            this.lbThreads.Text = "Used threads: ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbThreads);
+            this.Controls.Add(this.cmbThreads);
+            this.Controls.Add(this.lbTime);
+            this.Controls.Add(this.lbTimeElapsedConst);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.rbCsharp);
             this.Controls.Add(this.rbAssembly);
@@ -96,5 +142,9 @@
         private RadioButton rbAssembly;
         private RadioButton rbCsharp;
         private Button btnStart;
+        private Label lbTimeElapsedConst;
+        private Label lbTime;
+        private ComboBox cmbThreads;
+        private Label lbThreads;
     }
 }

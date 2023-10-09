@@ -1,0 +1,17 @@
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\bin\Debug\net6.0-windows\NegativePhotoConverter.exe
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\bin\Debug\net6.0-windows\NegativePhotoConverter.deps.json
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\bin\Debug\net6.0-windows\NegativePhotoConverter.runtimeconfig.json
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\bin\Debug\net6.0-windows\NegativePhotoConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\bin\Debug\net6.0-windows\NegativePhotoConverter.pdb
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.csproj.AssemblyReference.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.Form1.resources
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.csproj.GenerateResource.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.AssemblyInfoInputs.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.AssemblyInfo.cs
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.csproj.CoreCompileInputs.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\refint\NegativePhotoConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.pdb
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.genruntimeconfig.cache
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\ref\NegativePhotoConverter.dll
