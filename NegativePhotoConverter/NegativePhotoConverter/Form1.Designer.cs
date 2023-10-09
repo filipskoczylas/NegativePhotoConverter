@@ -33,8 +33,9 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lbTimeElapsedConst = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
-            this.cmbThreads = new System.Windows.Forms.ComboBox();
             this.lbThreads = new System.Windows.Forms.Label();
+            this.nupThreads = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nupThreads)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoadImages
@@ -98,14 +99,6 @@
             this.lbTime.Text = "0";
             this.lbTime.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // cmbThreads
-            // 
-            this.cmbThreads.FormattingEnabled = true;
-            this.cmbThreads.Location = new System.Drawing.Point(217, 32);
-            this.cmbThreads.Name = "cmbThreads";
-            this.cmbThreads.Size = new System.Drawing.Size(48, 28);
-            this.cmbThreads.TabIndex = 6;
-            // 
             // lbThreads
             // 
             this.lbThreads.AutoSize = true;
@@ -115,13 +108,35 @@
             this.lbThreads.TabIndex = 7;
             this.lbThreads.Text = "Used threads: ";
             // 
+            // nupThreads
+            // 
+            this.nupThreads.Location = new System.Drawing.Point(217, 32);
+            this.nupThreads.Maximum = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            this.nupThreads.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupThreads.Name = "nupThreads";
+            this.nupThreads.Size = new System.Drawing.Size(102, 27);
+            this.nupThreads.TabIndex = 9;
+            this.nupThreads.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nupThreads);
             this.Controls.Add(this.lbThreads);
-            this.Controls.Add(this.cmbThreads);
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.lbTimeElapsedConst);
             this.Controls.Add(this.btnStart);
@@ -130,6 +145,7 @@
             this.Controls.Add(this.btnLoadImages);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.nupThreads)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +160,7 @@
         private Button btnStart;
         private Label lbTimeElapsedConst;
         private Label lbTime;
-        private ComboBox cmbThreads;
         private Label lbThreads;
+        private NumericUpDown nupThreads;
     }
 }
