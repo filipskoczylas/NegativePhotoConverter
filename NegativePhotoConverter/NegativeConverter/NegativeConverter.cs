@@ -6,6 +6,7 @@ namespace NegativeConverter
     public class NegativeConverter
     {
         private readonly object Lock = new object();
+        public NegativeConverter() { }
         public Bitmap ConvertToNegative(Bitmap bitmap, int threads)
         {
             try

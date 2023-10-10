@@ -137,6 +137,7 @@
             this.pbNegative.Location = new System.Drawing.Point(423, 131);
             this.pbNegative.Name = "pbNegative";
             this.pbNegative.Size = new System.Drawing.Size(365, 307);
+            this.pbNegative.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNegative.TabIndex = 10;
             this.pbNegative.TabStop = false;
             // 
