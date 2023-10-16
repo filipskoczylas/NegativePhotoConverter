@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NegativePhotoConverter", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NegativeConverter", "NegativeConverter\NegativeConverter.csproj", "{71FAABCD-6320-4461-93CC-8871EDD0A645}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{88612242-6D69-46C5-9FF6-C2C944E67463}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{71FAABCD-6320-4461-93CC-8871EDD0A645}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71FAABCD-6320-4461-93CC-8871EDD0A645}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71FAABCD-6320-4461-93CC-8871EDD0A645}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88612242-6D69-46C5-9FF6-C2C944E67463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88612242-6D69-46C5-9FF6-C2C944E67463}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88612242-6D69-46C5-9FF6-C2C944E67463}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88612242-6D69-46C5-9FF6-C2C944E67463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

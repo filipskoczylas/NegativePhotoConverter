@@ -26,20 +26,30 @@ namespace NegativePhotoConverter
                 for(int x = 0; x < width; x++)
                 {
                     Color pixel = bitmap.GetPixel(x, y);
-                    rgbArray[y * width + x] = pixel.R << 16 | pixel.G << 8 | pixel.B;//(255 - (pixel.R << 16)) | (255 - (pixel.G << 8)) | (255 - pixel.B);
+                    rgbArray[y * width + x] = pixel.R << 16 | pixel.G << 8 | pixel.B;
+                    //rgbArray[y * width + x] = ((255 - pixel.R) << 16) | ((255 - pixel.G) << 8) | (255 - pixel.B);
                 }
             }
-            Bitmap returned = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+            var path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
+            var assembly = Assembly.LoadFrom(path);
+            var type = assembly.GetType("NegativeConverter.NegativeConverter");
+            var activator = Activator.CreateInstance(type);
+            MethodInfo method = type.GetMethod("ConvertToNegative");
+            object result = method.Invoke(activator, new object[] { rgbArray });
+
+            rgbArray = (int[])result;
+
+            Bitmap returned = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
             for (uint i = 0; i < size; i++)
             {
-                returned.SetPixel((int)i % width,(int) i / height, Color.FromArgb((byte)(rgbArray[i] >> 16), (byte)(rgbArray[i] >> 8), (byte)(rgbArray[i])));
+                returned.SetPixel((int)i % width,(int) i / width, Color.FromArgb((byte)255,(byte)(rgbArray[i] >> 16), (byte)(rgbArray[i] >> 8), (byte)(rgbArray[i])));
             }
-            //var path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
+            /*//var path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
             var assembly = Assembly.LoadFrom("ClassLibrary1.dll");
             var type = assembly.GetType("ClassLibrary1.Class1");
             var activator = Activator.CreateInstance(type);
             MethodInfo method = type.GetMethod("Hello");
-;           object result = method.Invoke(activator, new object[] { 4});
+;           object result = method.Invoke(activator, new object[] { 4});*/
             return returned;
         }
     }

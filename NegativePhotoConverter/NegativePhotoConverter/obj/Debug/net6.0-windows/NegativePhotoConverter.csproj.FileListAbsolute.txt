@@ -15,3 +15,4 @@ C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePho
 C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.pdb
 C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.genruntimeconfig.cache
 C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\ref\NegativePhotoConverter.dll
+C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativePhotoConverter\obj\Debug\net6.0-windows\NegativePhotoConverter.Properties.Resources.resources

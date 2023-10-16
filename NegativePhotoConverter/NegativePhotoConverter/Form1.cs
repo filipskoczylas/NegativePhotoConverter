@@ -27,6 +27,8 @@ namespace NegativePhotoConverter
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 fileToConvert = openFileDialog.FileName;
+                pbInput.Image = new Bitmap(fileToConvert);
+                pbOutput.Image = null;
             }
         }
 
@@ -37,7 +39,8 @@ namespace NegativePhotoConverter
             StartTimer();
             object result = dllMenager.Run(bitmap, (int)nupThreads.Value);
             StopTimer();
-            pbNegative.Image = (Bitmap)result;
+            Bitmap outputBitmap = (Bitmap)result;
+            pbOutput.Image = outputBitmap;
         }
 
         #region Timer
@@ -59,12 +62,11 @@ namespace NegativePhotoConverter
             long ticks = stopwatch.ElapsedTicks;
             lbTime.Text = ticks.ToString();
         }
+
         #endregion
 
         #region Utility
 
         #endregion
-
-
     }
 }

@@ -7,8 +7,29 @@ namespace NegativeConverter
     {
         private readonly object Lock = new object();
         public NegativeConverter() { }
-        public Bitmap ConvertToNegative(Bitmap bitmap, int threads)
+        public int[] ConvertToNegative(int[] rgbArray)
         {
+            //Check if null
+            if(rgbArray == null) return null;
+
+            for(int i = 0; i < rgbArray.Length; i++)
+            {
+                byte r = (byte)(rgbArray[i] >> 16);
+                byte g = (byte)(rgbArray[i] >> 8);
+                byte b = (byte)(rgbArray[i]);
+
+                //Negation
+
+                byte negR = (byte)(255 - r);
+                byte negG = (byte)(255 - g);
+                byte negB = (byte)(255 - b);
+
+                //Putting back into array
+                int negRGB = (negR << 16) | negG << 8 | negB;
+                rgbArray[i] = negRGB;
+            }
+            return rgbArray;
+            /*
             try
             {
                 int width = bitmap.Width;
@@ -27,7 +48,7 @@ namespace NegativeConverter
                 }
             }
             catch { }
-            return bitmap;
+            return bitmap;*/
         }
         private void ConvertAsync(ref Bitmap bitmap, int width, int startHeight, int endHeight)
         {
