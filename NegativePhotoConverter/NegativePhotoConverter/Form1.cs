@@ -34,12 +34,12 @@ namespace NegativePhotoConverter
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            int a = 0;
             Bitmap bitmap = new Bitmap(fileToConvert);
+            int[] rgbArray = dllMenager.PrepareData(bitmap);
             StartTimer();
-            object result = dllMenager.Run(bitmap, (int)nupThreads.Value);
+            dllMenager.RunAssembler(rgbArray, 1);
             StopTimer();
-            Bitmap outputBitmap = (Bitmap)result;
+            Bitmap outputBitmap = dllMenager.ConvertToImage(rgbArray);
             pbOutput.Image = outputBitmap;
         }
 

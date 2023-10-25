@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NegativePhotoConverter": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

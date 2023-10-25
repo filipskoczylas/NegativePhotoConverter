@@ -8,28 +8,39 @@ using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.AxHost;
 using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
+using System.Security.Policy;
 
 namespace NegativePhotoConverter
 {
     internal class DllMenager
     {
+        [DllImport("C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\x64\\Debug\\NegativeConverterAssembly.dll", EntryPoint = "MyProc")]
+        private static extern unsafe int MyProc(int* rgbArray, int startPosition, int endPosition);
         public DllMenager() { }
-        public object Run(Bitmap bitmap, int threads)
+        private int height;
+        private int width;
+        public int[] RunAssembler(int[] rgbArray, int threads)
         {
-            int width = bitmap.Width;
-            int height = bitmap.Height;
-            //r << 16, g << 8, b
-            uint size = (uint)(height * width);
-            int[] rgbArray = new int[size];
-            for(int y = 0; y < height; y++)
+            int? a;
+            try
             {
-                for(int x = 0; x < width; x++)
+                unsafe
                 {
-                    Color pixel = bitmap.GetPixel(x, y);
-                    rgbArray[y * width + x] = pixel.R << 16 | pixel.G << 8 | pixel.B;
-                    //rgbArray[y * width + x] = ((255 - pixel.R) << 16) | ((255 - pixel.G) << 8) | (255 - pixel.B);
+                    fixed (int* pRgbArray = rgbArray)
+                    {
+                        a = MyProc(pRgbArray, 0, (rgbArray.Length)/2);
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+            }
+            return rgbArray;
+        }
+        public int[] RunCsharp(int[] rgbArray, int threads)
+        {
             var path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
             var assembly = Assembly.LoadFrom(path);
             var type = assembly.GetType("NegativeConverter.NegativeConverter");
@@ -37,20 +48,35 @@ namespace NegativePhotoConverter
             MethodInfo method = type.GetMethod("ConvertToNegative");
             object result = method.Invoke(activator, new object[] { rgbArray });
 
-            rgbArray = (int[])result;
+            int[] toReturn = (int[])result;
 
-            Bitmap returned = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-            for (uint i = 0; i < size; i++)
+            return toReturn;
+        }
+        public int[] PrepareData(Bitmap bitmap)
+        {
+            width = bitmap.Width;
+            height = bitmap.Height;
+            //r << 16, g << 8, b
+            uint size = (uint)(height * width);
+            int[] rgbArray = new int[size];
+            for (int y = 0; y < height; y++)
             {
-                returned.SetPixel((int)i % width,(int) i / width, Color.FromArgb((byte)255,(byte)(rgbArray[i] >> 16), (byte)(rgbArray[i] >> 8), (byte)(rgbArray[i])));
+                for (int x = 0; x < width; x++)
+                {
+                    Color pixel = bitmap.GetPixel(x, y);
+                    rgbArray[y * width + x] = pixel.R << 16 | pixel.G << 8 | pixel.B;
+                }
             }
-            /*//var path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
-            var assembly = Assembly.LoadFrom("ClassLibrary1.dll");
-            var type = assembly.GetType("ClassLibrary1.Class1");
-            var activator = Activator.CreateInstance(type);
-            MethodInfo method = type.GetMethod("Hello");
-;           object result = method.Invoke(activator, new object[] { 4});*/
-            return returned;
+            return rgbArray;
+        }
+        public Bitmap ConvertToImage(int[] rgbArray)
+        {
+            Bitmap result = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            for (uint i = 0; i < height*width; i++)
+            {
+                result.SetPixel((int)i % width, (int)i / width, Color.FromArgb((byte)255, (byte)(rgbArray[i] >> 16), (byte)(rgbArray[i] >> 8), (byte)(rgbArray[i])));
+            }
+            return result;
         }
     }
 }

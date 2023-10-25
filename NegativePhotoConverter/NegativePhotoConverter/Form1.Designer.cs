@@ -202,7 +202,7 @@
             this.Controls.Add(this.lbTimeElapsedConst);
             this.Controls.Add(this.btnStart);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Negative photo converter";
             ((System.ComponentModel.ISupportInitialize)(this.nupThreads)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOutput)).EndInit();
             this.gbConfiguration.ResumeLayout(false);
