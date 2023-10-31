@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AofzU3OoY62GHBoRb3VE1B6GtL1bihrwSXYU89komlD/GE89nwIaTyjEwbUxKOlaPKlUkHz2/nlM80WUzsj9HA==",
+  "dgSpecHash": "RKtnHw0aVAEhupX62lZBGKrmg0SXmHfBMuaXmb5AIXcAVr1dOsdpxpdkGNkovQWgDchbRhcph4LfSR5867HEFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
+  "projectFilePath": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Filip\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"

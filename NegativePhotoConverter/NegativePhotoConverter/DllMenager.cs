@@ -15,42 +15,84 @@ namespace NegativePhotoConverter
 {
     internal class DllMenager
     {
-        [DllImport("C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\x64\\Debug\\NegativeConverterAssembly.dll", EntryPoint = "MyProc")]
-        private static extern unsafe int MyProc(int* rgbArray, int startPosition, int endPosition);
-        public DllMenager() { }
+        [DllImport("..\\..\\..\\..\\x64\\Debug\\NegativeConverterAssembly.dll", EntryPoint = "MyProc")]
+        private static extern unsafe int MyProc(int[] rgbArray, int startPosition, int endPosition);
+        Thread[] threads;
+        object[] dllResult;
+        public DllMenager() 
+        {
+            threads = new Thread[64];
+        }
         private int height;
         private int width;
-        public int[] RunAssembler(int[] rgbArray, int threads)
+        public void PrepareAssembler(int[] rgbArray, int threadsNumber)
         {
-            int? a;
+            int computedSize = rgbArray.Length / threadsNumber;
             try
             {
-                unsafe
+                for (int i = 0; i < threadsNumber - 1; i++)
                 {
-                    fixed (int* pRgbArray = rgbArray)
-                    {
-                        a = MyProc(pRgbArray, 0, (rgbArray.Length)/2);
-                    }
+                    int index = i;
+                    threads[index] = new Thread(
+                        () =>
+                        {
+                            MyProc(rgbArray, (index * computedSize), ((index + 1) * computedSize));
+                        }
+                        );
                 }
+                threads[threadsNumber - 1] = new Thread(
+                    () =>
+                    {
+                        MyProc(rgbArray, ((threadsNumber - 1) * computedSize), rgbArray.Length);
+                    }
+                    );
             }
             catch (Exception)
             {
 
             }
-            return rgbArray;
         }
-        public int[] RunCsharp(int[] rgbArray, int threads)
+
+        public void PrepareCsharp(int[] rgbArray, int threadsNumber)
         {
-            var path = @"C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
+            string path = @"..\..\..\..\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll";
             var assembly = Assembly.LoadFrom(path);
             var type = assembly.GetType("NegativeConverter.NegativeConverter");
             var activator = Activator.CreateInstance(type);
             MethodInfo method = type.GetMethod("ConvertToNegative");
-            object result = method.Invoke(activator, new object[] { rgbArray });
+            dllResult = new object[threadsNumber];
+            int computedSize = rgbArray.Length / threadsNumber;
+            for (int i = 0; i < threadsNumber - 1; i++)
+            {
+                int index = i;
+                threads[index] = new Thread(
+                    ()=>
+                    {
+                        method.Invoke(activator, new object[] {rgbArray, (index * computedSize), ((index + 1) * computedSize) });
+                    }
+                    );
+            }
 
-            int[] toReturn = (int[])result;
-
-            return toReturn;
+            threads[threadsNumber - 1] = new Thread(
+                    () =>
+                    {
+                        method.Invoke(activator, new object[] { rgbArray, ((threadsNumber - 1) * computedSize), rgbArray.Length});
+                    }
+                    );
+        }
+        public int[] Run(int[] rgbArray, int threadsNumber)
+        {
+            for (int i = 0; i < threadsNumber; i++)
+            {
+                int index = i;
+                threads[index].Start();
+            }
+            for (int i = 0; i < threadsNumber; i++)
+            {
+                int index = i;
+                threads[index].Join();
+            }
+            return rgbArray;
         }
         public int[] PrepareData(Bitmap bitmap)
         {

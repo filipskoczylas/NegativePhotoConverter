@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj": {}
+    "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj": {
+    "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj",
+        "projectUniqueName": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj",
         "projectName": "NegativePhotoConverter",
-        "projectPath": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj",
+        "projectPath": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\obj\\",
+        "outputPath": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativePhotoConverter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\VisualStudio SDK\\NuGetPackages"

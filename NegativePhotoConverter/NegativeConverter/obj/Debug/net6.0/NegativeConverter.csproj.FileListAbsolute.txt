@@ -10,3 +10,15 @@ C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeCon
 C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\refint\NegativeConverter.dll
 C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.pdb
 C:\Users\Filip\Desktop\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\ref\NegativeConverter.dll
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.deps.json
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.dll
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\bin\Debug\net6.0\NegativeConverter.pdb
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.csproj.AssemblyReference.cache
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.AssemblyInfoInputs.cache
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.AssemblyInfo.cs
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.csproj.CoreCompileInputs.cache
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.dll
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\refint\NegativeConverter.dll
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.pdb
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\ref\NegativeConverter.dll

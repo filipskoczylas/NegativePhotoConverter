@@ -36,9 +36,20 @@ namespace NegativePhotoConverter
         {
             Bitmap bitmap = new Bitmap(fileToConvert);
             int[] rgbArray = dllMenager.PrepareData(bitmap);
-            StartTimer();
-            dllMenager.RunAssembler(rgbArray, 1);
-            StopTimer();
+            if (rbAssembly.Checked)
+            {
+                dllMenager.PrepareAssembler(rgbArray, (int)nupThreads.Value);
+                StartTimer();
+                dllMenager.Run(rgbArray, (int)nupThreads.Value);
+                StopTimer();
+            }
+            else
+            {
+                dllMenager.PrepareCsharp(rgbArray, (int)nupThreads.Value);
+                StartTimer();
+                dllMenager.Run(rgbArray, (int)nupThreads.Value);
+                StopTimer();
+            }
             Bitmap outputBitmap = dllMenager.ConvertToImage(rgbArray);
             pbOutput.Image = outputBitmap;
         }
@@ -60,7 +71,20 @@ namespace NegativePhotoConverter
         {
             stopwatch.Stop();
             long ticks = stopwatch.ElapsedTicks;
-            lbTime.Text = ticks.ToString();
+            if(lbTime.Text.Split("\n").Length > 4)
+            {
+                string[] times = lbTime.Text.Split("\n");
+                lbTime.Text = times[0] + "\n" + times[1] + "\n" + times[2] + "\n" + times[3];
+            }
+
+            if (lbTime.Text == "0")
+            {
+                lbTime.Text = ticks.ToString();
+            }
+            else
+            {
+                lbTime.Text = ticks.ToString() + "\n" + lbTime.Text;
+            }
         }
 
         #endregion

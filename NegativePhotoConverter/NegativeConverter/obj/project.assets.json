@@ -133,11 +133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
+      "projectUniqueName": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
       "projectName": "NegativeConverter",
-      "projectPath": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
+      "projectPath": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
       "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filip\\Desktop\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\obj\\",
+      "outputPath": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files\\VisualStudio SDK\\NuGetPackages"
