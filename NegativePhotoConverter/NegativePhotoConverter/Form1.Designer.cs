@@ -52,7 +52,7 @@
             this.btnLoadImages.Name = "btnLoadImages";
             this.btnLoadImages.Size = new System.Drawing.Size(130, 30);
             this.btnLoadImages.TabIndex = 0;
-            this.btnLoadImages.Text = "Select images";
+            this.btnLoadImages.Text = "Select image";
             this.btnLoadImages.UseVisualStyleBackColor = true;
             this.btnLoadImages.Click += new System.EventHandler(this.btnLoadImages_Click);
             // 
@@ -80,6 +80,7 @@
             // 
             // btnStart
             // 
+            this.btnStart.Enabled = false;
             this.btnStart.Location = new System.Drawing.Point(12, 200);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(130, 30);
@@ -201,6 +202,9 @@
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.lbTimeElapsedConst);
             this.Controls.Add(this.btnStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Negative photo converter";
             ((System.ComponentModel.ISupportInitialize)(this.nupThreads)).EndInit();

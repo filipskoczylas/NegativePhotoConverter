@@ -23,9 +23,10 @@ namespace NegativePhotoConverter
             openFileDialog.InitialDirectory = "c:\\";
             openFileDialog.Title = "Select images to convert";
             openFileDialog.RestoreDirectory = true;
-            //openFileDialog.Filter = "Images (*.jpg;*.png,*.jpeg)|All files (*.*)";
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                btnStart.Enabled = true;
                 fileToConvert = openFileDialog.FileName;
                 pbInput.Image = new Bitmap(fileToConvert);
                 pbOutput.Image = null;
