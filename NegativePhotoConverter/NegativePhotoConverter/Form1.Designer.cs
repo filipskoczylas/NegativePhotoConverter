@@ -94,9 +94,9 @@
             this.lbTimeElapsedConst.AutoSize = true;
             this.lbTimeElapsedConst.Location = new System.Drawing.Point(12, 233);
             this.lbTimeElapsedConst.Name = "lbTimeElapsedConst";
-            this.lbTimeElapsedConst.Size = new System.Drawing.Size(170, 20);
+            this.lbTimeElapsedConst.Size = new System.Drawing.Size(195, 40);
             this.lbTimeElapsedConst.TabIndex = 4;
-            this.lbTimeElapsedConst.Text = "Function execution time:";
+            this.lbTimeElapsedConst.Text = "Function execution time [us]\r\n:";
             // 
             // lbTime
             // 

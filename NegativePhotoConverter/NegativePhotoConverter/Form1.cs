@@ -1,5 +1,14 @@
+/**
+ * @Project     Negative photo converter
+ * @Author      Filip Skoczylas
+ * @Version     1.0
+ * @Year        2023/2024
+ * @Semestre    5
+ */
+using Microsoft.Win32;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Management;
 
 namespace NegativePhotoConverter
 {
@@ -8,10 +17,12 @@ namespace NegativePhotoConverter
         Stopwatch stopwatch;
         DllMenager dllMenager;
         string fileToConvert;
+        uint processorFrequency; // in MHZ
         public Form1()
         {
             InitializeComponent();
             dllMenager= new DllMenager();
+            DetermineProcessorFrequency();
             RunTimerFirstTime();
         }
 
@@ -72,6 +83,7 @@ namespace NegativePhotoConverter
         {
             stopwatch.Stop();
             long ticks = stopwatch.ElapsedTicks;
+            long microSeconds = ticks / processorFrequency;
             if(lbTime.Text.Split("\n").Length > 4)
             {
                 string[] times = lbTime.Text.Split("\n");
@@ -80,18 +92,22 @@ namespace NegativePhotoConverter
 
             if (lbTime.Text == "0")
             {
-                lbTime.Text = ticks.ToString();
+                lbTime.Text = microSeconds.ToString();
             }
             else
             {
-                lbTime.Text = ticks.ToString() + "\n" + lbTime.Text;
+                lbTime.Text = microSeconds.ToString() + "\n" + lbTime.Text;
             }
         }
 
         #endregion
 
         #region Utility
-
+        void DetermineProcessorFrequency()
+        {
+            using ManagementObject Mo = new ManagementObject("Win32_Processor.DeviceID='CPU0'");
+            processorFrequency = (uint)(Mo["MaxClockSpeed"]); // in MHZ
+        }
         #endregion
     }
 }

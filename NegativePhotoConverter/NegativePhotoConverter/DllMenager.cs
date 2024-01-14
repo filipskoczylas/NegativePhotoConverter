@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * @Project     Negative photo converter
+ * @Author      Filip Skoczylas
+ * @Version     1.0
+ * @Year        2023/2024
+ * @Semestre    5
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
