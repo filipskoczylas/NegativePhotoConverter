@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj": {
-      "version": "1.0.0",
+      "version": "4.8.0.5324",
       "restore": {
         "projectUniqueName": "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NegativeConverter\\NegativeConverter.csproj",
         "projectName": "NegativeConverter",
@@ -17,6 +17,7 @@
           "D:\\Program Files\\VisualStudio SDK\\NuGetPackages"
         ],
         "configFilePaths": [
+          "D:\\Studia\\JA\\Projekt\\NegativePhotoConverter\\NegativePhotoConverter\\NuGet.Config",
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

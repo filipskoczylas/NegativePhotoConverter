@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "NegativeConverter/1.0.0": {
+      "NegativeConverter/4.8.0.5324": {
         "dependencies": {
           "System.Drawing.Common": "7.0.0"
         },
@@ -52,7 +52,7 @@
     }
   },
   "libraries": {
-    "NegativeConverter/1.0.0": {
+    "NegativeConverter/4.8.0.5324": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

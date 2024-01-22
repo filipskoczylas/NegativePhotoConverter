@@ -1,2 +1,5 @@
 ﻿  Assembling NegativeConverterAssembly.asm...
+  pch.cpp
+  dllmain.cpp
+     Creating library D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\x64\Debug\NegativeConverterAssembly.lib and object D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\x64\Debug\NegativeConverterAssembly.exp
   NegativeConverterAssembly.vcxproj -> D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\x64\Debug\NegativeConverterAssembly.dll

@@ -22,3 +22,4 @@ D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConve
 D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\refint\NegativeConverter.dll
 D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.pdb
 D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\ref\NegativeConverter.dll
+D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\obj\Debug\net6.0\NegativeConverter.sourcelink.json

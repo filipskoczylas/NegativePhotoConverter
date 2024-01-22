@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NegativeConverter
 build_property.ProjectDir = D:\Studia\JA\Projekt\NegativePhotoConverter\NegativePhotoConverter\NegativeConverter\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
